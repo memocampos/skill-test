@@ -11,7 +11,7 @@ Please follow these steps to submit your test results:
 Start by cloning the repository:
 
 ```bash
-git clone https://github.com/sol2026-dev/test_assessment.git
+git clone https://github.com/solice2025/skill-test.git
 ```
 
 ### 2. Configure Your Git Settings
