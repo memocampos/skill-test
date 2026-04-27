@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Management</title>
+</head>
+<body>
+
+    <section>
+        <h2>API ENDPOINTS</h2>
+        <ul>
+            <li><strong>GET</strong> /tasks</li>
+            <li><strong>GET</strong> /tasks/{id}</li>
+            <li><strong>POST</strong> /tasks</li>
+            <li><strong>PUT</strong> /tasks/{id}</li>
+            <li><strong>DELETE</strong> /tasks/{id}</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <main>
+        <h1>Task List</h1>
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    <strong>{{ task.title }}</strong> — {{ task.description }}
+                </li>
+            {% endfor %}
+        </ul>
+    </main>
+
+</body>
+</html>

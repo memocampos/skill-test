@@ -1,0 +1,34 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="PyMySQL" />
+          <option value="stripe" />
+          <option value="click" />
+          <option value="Flask" />
+          <option value="Flask-Cors" />
+          <option value="Flask-Mail" />
+          <option value="mysql-connector-python" />
+          <option value="cryptography" />
+          <option value="Flask-JWT-Extended" />
+          <option value="boto3" />
+          <option value="requests" />
+          <option value="itsdangerous" />
+          <option value="Jinja2" />
+          <option value="MarkupSafe" />
+          <option value="Werkzeug" />
+          <option value="tzlocal" />
+          <option value="pytz" />
+          <option value="pytz-deprecation-shim" />
+          <option value="spotipy" />
+          <option value="chardet" />
+          <option value="PyJWT" />
+          <option value="urllib3" />
+          <option value="Flask-Session" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
