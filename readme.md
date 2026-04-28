@@ -1,62 +1,88 @@
+# Task API (Flask)
 
-# Developer Skills Assessment
-
-Thank you for participating in our skill assessment test! We appreciate your effort and look forward to reviewing your submission.
-
-## Submission Instructions
-
-Please follow these steps to submit your test results:
-
-### 1. Clone the Repository
-Start by cloning the repository:
-
-```bash
-git clone https://github.com/solice2025/skill-test.git
-```
-
-### 2. Configure Your Git Settings
-Set your Git user information
-
-```bash
-git config user.email "your.email@example.com"
-git config user.name "Your Name"
-git config core.hooksPath .githooks
-```
-
-Verify your configuration:
-
-```bash
-git config user.email
-git config user.name
-```
-
-### 3. Create Your Branch
-Create a new branch named with your name and the current date (e.g., `john-2024-04-27`):
-
-```bash
-git checkout -b "YourName-YYYY-MM-DD"
-```
-
-**Note:** Please use your name and the date of submission to help us identify your branch easily.
-
-### 4. Submit Your Results
-Add your changes, commit with an appropriate message, and push your branch:
-
-```bash
-git add .
-git commit -m "Submission: [Your Name]'s [Skill] Assessment Result"
-git push -u origin "YourBranchName"
-```
-
-**Note:** Please mention your selected skill on your commit (e.g., `git commit -m "Submission: John's node.js Assessment Result"`).
-
-### 5. Finalize
-Once pushed, your submission is complete. Please notify us if needed, or wait for confirmation.
-
-## Need Assistance?
-If you have any questions or encounter issues during the submission process, please don't hesitate to contact us.
+Simple REST API to manage tasks using in-memory storage.
 
 ---
 
-We appreciate your participation and wish you the best of luck!
+## 🚀 Run the project
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+
+pip install -r requirements.txt
+python app.py
 ```
+
+Server will start at:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## API Endpoints
+
+### 1. Get all tasks
+**GET /tasks**
+
+```bash
+curl http://127.0.0.1:5000/tasks
+```
+
+---
+
+### 2. Get task by ID
+**GET /tasks/{id}**
+
+```bash
+curl http://127.0.0.1:5000/tasks/1
+```
+
+---
+
+### 3. Create task
+**POST /tasks**
+
+```bash
+curl -X POST http://127.0.0.1:5000/tasks \
+-H "Content-Type: application/json" \
+-d '{"title":"New Task","description":"Details"}'
+```
+
+---
+
+### 4. Update task
+**PUT /tasks/{id}**
+
+```bash
+curl -X PUT http://127.0.0.1:5000/tasks/1 \
+-H "Content-Type: application/json" \
+-d '{"title":"Updated Task","description":"Updated details"}'
+```
+
+---
+
+### 5. Delete task
+**DELETE /tasks/{id}**
+
+```bash
+curl -X DELETE http://127.0.0.1:5000/tasks/1
+```
+
+---
+
+## Notes
+
+- Requests must use:
+  `Content-Type: application/json`
+ 
+- Data is stored in memory (will reset when server restarts)
+- API Will  return  standard HTTP status codes:
+  - 200 OK
+  - 201 Created
+  - 204 No Content
+  - 400 Bad Request
+  - 404 Not Found
